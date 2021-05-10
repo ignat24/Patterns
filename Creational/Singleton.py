@@ -20,3 +20,9 @@ firstObj = Singleton()
 firstObj.set_instance()
 print("\nCreate second object:")
 secondObj = Singleton()
+
+
+class NewSingleton:
+
+    @classmethod
+    def __cl

@@ -16,31 +16,34 @@ class CreateDrink(ABC):
         pass
 
 
-class CreateCola(CreateDrink):
+class CocaCola(CreateDrink):
 
     def create_drink(self):
-        print("Your Coca-cola, please!")
+        return "Your Coca-cola, please!"
 
 
-class CreateSprite(CreateDrink):
-
-    def create_drink(self):
-        print("Your Sprite, please!")
-
-
-class CreateFanta(CreateDrink):
+class Sprite(CreateDrink):
 
     def create_drink(self):
-        print("Your Fanta, please!")
+        return "Your Sprite, please!"
+
+
+class Fanta(CreateDrink):
+
+    def create_drink(self):
+        return "Your Fanta, please!"
 
 
 class FactoryDrink:
 
     def __init__(self):
         self.factory_dict = {}
-        for i, drink in enumerate(Drink):
+        for i,drink in enumerate(Drink):
             method = str(drink).split(".")[1]
             self.factory_dict[i+1] = eval(method)
 
     def create_drink(self, drink):
-        return self.factory_dict[drink]()
+        conDrink = self.factory_dict[drink]()
+        print(conDrink.create_drink())
+
+

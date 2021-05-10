@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 class Builder(ABC):
 
     def draw_line(self):

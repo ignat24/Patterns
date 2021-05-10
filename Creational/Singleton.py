@@ -1,12 +1,22 @@
 class Singleton:
 
-    def __new__(cls):
-        if not hasattr(cls,"instance"):
-            cls.instance = super(Singleton, cls).__new__(cls)
-        return cls.instance
+    __instance = None
 
+    def __init__(self):
+        if not Singleton.__instance:
+            print("Called method init")
+        else:
+            print("Class object already create", self.set_instance())
+
+    @classmethod
+    def set_instance(cls):
+        if not cls.__instance:
+            cls.__instance = Singleton()
+        return cls.__instance
+
+
+print("Create first object:")
 firstObj = Singleton()
-print("id 1-st object:", id(firstObj))
-
+firstObj.set_instance()
+print("\nCreate second object:")
 secondObj = Singleton()
-print("2-nd object id:", id(secondObj))

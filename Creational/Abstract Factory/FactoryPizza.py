@@ -50,4 +50,10 @@ class FactoryPizza:
 
 
     def create_pizza(self, pizzaType):
-        return self.factory_dict[pizzaType]()
+        pizza = self.factory_dict[pizzaType]()
+        print("Your pizza", pizza, "price:", pizza.get_price())
+
+
+
+
+

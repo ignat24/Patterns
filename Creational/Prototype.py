@@ -37,6 +37,9 @@ class NewClass(Prototype):
         return copy(self)
 
 
+
+
+
 class Factory:
 
     def __init__(self):
@@ -59,6 +62,10 @@ class Factory:
 
 
 factory =Factory()
+
+
+
+
 print("Myclass")
 instance1 = factory.get_myclass_5()
 print(instance1.get_type(), instance1.get_number())

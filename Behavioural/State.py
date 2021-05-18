@@ -55,7 +55,7 @@ class TrafficLight:
 
 tl = TrafficLight()
 tl.change(YellowLight)
-tl.change(GreenLight)
+print(tl.get_state())
 print(tl.get_state())
 
 # class TrafficLight:

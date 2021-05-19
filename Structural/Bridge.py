@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 
 
-class AbstractInterface:
+class AbstractInterface(ABC):
 
+    @abstractmethod
     def functional(self):
         raise NotImplemented()
 

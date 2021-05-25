@@ -1,13 +1,16 @@
 from abc import ABC, abstractmethod
 
 
-class Graphic:
+class Graphic(ABC):
+
 
     def draw(self):
         pass
 
+
     def add(self, obj):
         pass
+
 
     def get_child(self, index):
         pass

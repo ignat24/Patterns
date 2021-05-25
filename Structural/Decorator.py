@@ -7,9 +7,11 @@ class AbstractCar(ABC):
     def get_coast(self):
         pass
 
+    @abstractmethod
     def get_power(self):
         pass
 
+    @abstractmethod
     def get_weight(self):
         pass
 
